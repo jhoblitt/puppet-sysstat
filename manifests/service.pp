@@ -1,3 +1,13 @@
+# == Class: sysstat::service
+#
+# === Authors
+#
+# Joshua Hoblitt <jhoblitt@cpan.org>
+#
+# === Copyright
+#
+# Copyright (C) 2013 Joshua Hoblitt
+#
 class sysstat::service {
   include sysstat::install
 
