@@ -1,8 +1,18 @@
 require 'spec_helper'
 
 describe 'sysstat', :type => :class do
-  it { should contain_class('sysstat') }
-  it { should contain_class('sysstat::install') }
-  it { should contain_package('sysstat').with_ensure('present') }
-  it { should contain_class('sysstat::service') }
+
+  describe 'for osfamily RedHat' do
+    let :facts do
+      {
+        :osfamily => 'RedHat',
+      }
+    end
+
+    it { should include_class('sysstat') }
+    it { should include_class('sysstat::params') }
+    it { should include_class('sysstat::install') }
+    it { should include_class('sysstat::service') }
+  end
+
 end

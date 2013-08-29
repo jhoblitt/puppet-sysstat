@@ -11,7 +11,7 @@
 # Copyright (C) 2013 Joshua Hoblitt
 #
 class sysstat::install {
-  package { 'sysstat':
+  package { $sysstat::params::sysstat_package:
     ensure => present,
   }
 }

@@ -12,7 +12,7 @@
 #
 # Copyright (C) 2013 Joshua Hoblitt
 #
-class sysstat {
+class sysstat inherits sysstat::params {
   class { 'sysstat::install': } ->
   class { 'sysstat::service': } ->
   Class['Sysstat']
