@@ -3,21 +3,46 @@ Puppet sysstat Module
 
 [![Build Status](https://travis-ci.org/jhoblitt/puppet-sysstat.png)](https://travis-ci.org/jhoblitt/puppet-sysstat)
 
+#### Table of Contents
+
+1. [Overview](#overview)
+2. [Description](#description)
+3. [Usage](#usage)
+4. [Limitations](#limitations)
+    * [Tested Platforms](#tested-platforms)
+5. [Support](#support)
+
+
+Overview
+--------
+
+Manages the sysstat package
+
 
 Description
 -----------
 
 This module installs and manages the
-[sysstat](/etc/puppet/env/prod/modules/sysstat) package which provides the
-`sar` and `iostat` commands.
+[sysstat](http://sebastien.godard.pagesperso-orange.fr/) package which provides
+the `sar` and `iostat` commands.
 
 
-Examples
---------
+Usage
+-----
 
-    include systat
+    include sysstat
 
-    class { 'systat': }
+
+Limitations
+-----------
+
+At present, only support for `$::osfamily == 'RedHat'` has been implimented.
+Adding other Linux distrubtions should be trivial.
+
+### Tested on
+
+* el5.x
+* el6.x
 
 
 Support
@@ -25,9 +50,4 @@ Support
 
 Please log tickets and issues at [github](https://github.com/jhoblitt/puppet-sysstat/issues)
 
-
-Copyright
----------
-
-Copyright (C) 2011-2013 Joshua Hoblitt <jhoblitt@cpan.org>
 

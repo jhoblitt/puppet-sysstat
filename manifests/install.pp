@@ -1,5 +1,7 @@
 # == Class: sysstat::install
 #
+# This class should be considered private.
+#
 # === Authors
 #
 # Joshua Hoblitt <jhoblitt@cpan.org>
@@ -9,7 +11,7 @@
 # Copyright (C) 2013 Joshua Hoblitt
 #
 class sysstat::install {
-  package {'sysstat':
-    ensure => latest,
+  package { 'sysstat':
+    ensure => present,
   }
 }

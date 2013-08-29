@@ -1,5 +1,9 @@
 # == Class: sysstat
 #
+# === Examples
+#
+# include sysstat
+#
 # === Authors
 #
 # Joshua Hoblitt <jhoblitt@cpan.org>
@@ -9,5 +13,7 @@
 # Copyright (C) 2013 Joshua Hoblitt
 #
 class sysstat {
-  include sysstat::install, sysstat::service
+  class { 'sysstat::install': } ->
+  class { 'sysstat::service': } ->
+  Class['Sysstat']
 }
