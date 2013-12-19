@@ -12,7 +12,7 @@
 #
 class sysstat::params {
   case $::osfamily {
-    'redhat': {
+    'debian', 'redhat': {
       $sysstat_package = 'sysstat'
     }
     default: {
