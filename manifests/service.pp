@@ -16,4 +16,11 @@ class sysstat::service {
     hasrestart  => true,
     enable      => true,
   }
+
+  if $::osfamily == 'Debian' {
+    augeas { '/etc/default/sysstat':
+      context => '/files/etc/default/sysstat/',
+      changes => 'set ENABLED true',
+    }
+  }
 }
