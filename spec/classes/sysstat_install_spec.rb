@@ -12,7 +12,7 @@ describe 'sysstat::install', :type => :class do
       }
     end
 
-    it { should include_class('sysstat::install') }
+    it { should contain_class('sysstat::install') }
     it { should contain_package('sysstat').with_ensure('present') }
   end
 

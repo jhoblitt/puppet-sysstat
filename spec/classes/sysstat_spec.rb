@@ -9,10 +9,10 @@ describe 'sysstat', :type => :class do
       }
     end
 
-    it { should include_class('sysstat') }
-    it { should include_class('sysstat::params') }
-    it { should include_class('sysstat::install') }
-    it { should include_class('sysstat::service') }
+    it { should contain_class('sysstat') }
+    it { should contain_class('sysstat::params') }
+    it { should contain_class('sysstat::install') }
+    it { should contain_class('sysstat::service') }
   end
 
 end

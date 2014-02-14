@@ -8,7 +8,7 @@ describe 'sysstat::params', :type => :class do
       }
     end
 
-    it { should include_class('sysstat::params') }
+    it { should contain_class('sysstat::params') }
   end
 
   describe 'for osfamily Debian' do
@@ -18,7 +18,7 @@ describe 'sysstat::params', :type => :class do
       }
     end
 
-    it { should include_class('sysstat::params') }
+    it { should contain_class('sysstat::params') }
   end
   
   describe 'unsupported osfamily' do
@@ -30,7 +30,7 @@ describe 'sysstat::params', :type => :class do
     end
   
     it 'should fail' do
-      expect { should include_class('sysstat::params') }.
+      expect { should contain_class('sysstat::params') }.
         to raise_error(Puppet::Error, /not supported on Solaris/)
     end
   end
