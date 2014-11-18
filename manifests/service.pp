@@ -12,9 +12,9 @@
 #
 class sysstat::service {
   service{ 'sysstat':
-    hasstatus   => false,
-    hasrestart  => true,
-    enable      => true,
+    hasstatus  => false,
+    hasrestart => true,
+    enable     => true,
   }
 
   if $::osfamily == 'Debian' {
